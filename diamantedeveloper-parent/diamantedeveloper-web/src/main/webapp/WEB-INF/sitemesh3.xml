@@ -1,0 +1,12 @@
+<sitemesh>
+    
+ 	<mapping path="/*.html" decorator="/WEB-INF/decorators/template.jsp"/>
+ 	<mapping path="/*Json.html" decorator="/WEB-INF/decorators/json.jsp"/>
+ 	<mapping path="/*Inner.html" decorator="/WEB-INF/decorators/inner.jsp"/>
+ 	
+ 	
+ 	<mapping path="/*pdf*" exclue="true"/>
+ 	<mapping path="/*.jpg" exclue="true"/>
+ 	<mapping path="/*.gif" exclue="true"/>
+ 	<mapping path="/*.png" exclue="true"/>
+</sitemesh>
