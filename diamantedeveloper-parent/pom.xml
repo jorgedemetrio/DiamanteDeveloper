@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.alldreams.diamantedeveloper</groupId>
@@ -10,7 +9,7 @@
 	<packaging>pom</packaging>
 	<name>DiamanteDeveloper Parent</name>
 	<description>DiamanteDeveloper Parent</description>
-	<inceptionYear></inceptionYear>
+	<inceptionYear/>
 	<url>http://www.alldreams.com.br</url>
 	<organization>
 		<name>AllDreams</name>
@@ -18,14 +17,14 @@
 	</organization>
 	<developers>
 		<developer>
-			<id></id>
+			<id/>
 			<name>Jorge Demetrio</name>
-			<email></email>
-			<organization></organization>
+			<email/>
+			<organization/>
 			<roles>
 				<role>Developer</role>
 			</roles>
-			<timezone></timezone>
+			<timezone/>
 		</developer>
 	</developers>
 	<dependencyManagement>
@@ -309,7 +308,28 @@
 				<hibernate.hbm2ddl.auto>validate</hibernate.hbm2ddl.auto>
 			</properties>
 		</profile>	
-	</profiles>
+	<profile>
+<!-- When built in OpenShift the openshift profile will be used when invoking mvn. -->
+<!-- Use this profile for any OpenShift specific customization your app will need. -->
+<!-- By default that is to put the resulting archive into the deployments folder. -->
+<!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
+	<id>openshift</id>
+	<build>
+		<finalName>diamantedeveloper-parent</finalName>
+		<plugins>
+			<plugin>
+       <artifactId>maven-war-plugin</artifactId>
+       <version>2.4</version>
+       <configuration>
+         <outputDirectory>webapps</outputDirectory>
+         <warName>ROOT</warName>
+       </configuration>
+     </plugin>
+
+		</plugins>
+	</build>
+</profile>
+    </profiles>
 	<build>
 		<plugins>
 			<plugin>

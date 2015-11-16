@@ -1,7 +1,7 @@
 /**
  *
  */
-package br.com.alldreams.diamantecrm.abstracts;
+package br.com.alldreams.diamantedev.abstracts;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

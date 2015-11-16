@@ -1,7 +1,7 @@
 /**
  *
  */
-package br.com.alldreams.diamantecrm.usuario.controller;
+package br.com.alldreams.diamantedev.usuario.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.alldreams.diamanetedev.usuario.vo.UsuarioVO;
-import br.com.alldreams.diamantecrm.abstracts.AbstractController;
+import br.com.alldreams.diamantedev.abstracts.AbstractController;
 
-import com.br.alldreams.diamantecrm.usuario.service.UsuarioService;
+import com.br.alldreams.diamantedev.usuario.service.UsuarioService;
 
 /**
  * @author Jorge Demetrio
